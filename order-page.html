@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Quickway fiesta</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<marquee><b>Welcome to our website where you can find all the food you need with drinks. Feel free to order online on the Online shop tab. 
+    If there is any problem please contact us through Contact Us page. "Completed by: <strong>Bibek Neupane</strong>" </b> </marquee>
+<header>
+    <h1>Welcome to Online Food</h1>
+    </header>
+  
+
+	
+	<div class="topnav">
+    <ul>
+    <span><a href="index.html">Home Page</a></span> &nbsp &nbsp &nbsp &nbsp
+    <span><a href="Aboutus.html">About Us Page</a></span> &nbsp &nbsp &nbsp &nbsp
+    <span><a href="shop.html">Online Shop</a></span> &nbsp &nbsp &nbsp &nbsp
+	<span><a href="faqs.html">FAQs Page</a></span> &nbsp &nbsp &nbsp &nbsp
+    <span><a href="basket.html">Shopping Basket</a></span> &nbsp &nbsp &nbsp &nbsp
+    <span><a href="register.html">Register</a></span>
+        &nbsp &nbsp &nbsp &nbsp
+  </div>
+    <div class="dropdown">
+      <button>Contact Us</button>
+      <div class="dropdown-content">
+        <a href="https://whatsapp.com">WhatsApp</a>
+        <a href="contactonlinefiesta@gmail.com">Gmail</a>
+        <a href="https://facebook.com">Facebook</a>
+        <a href="https://twitter.com/">Twitter</a>
+      </div>
+    </div>
+  
+   
+	</ul>
+    <p><b><strong> Here are the details for your orders. Please make sure everthing is right</strong></b></p>
+    
+   
+
+      <div class="order-details">
+        
+
+      </div>
+
+      <div align = "center" class = "footer" >
+        <p><strong>Thank you for ordering and see you soon. </strong></p>
+        <p> See the wonderful foods here and taste an amazing flavours of Asia. </p>
+        </div>
+      </div>
+
+    <script>
+      let orderDetails = JSON.parse(localStorage.getItem("orderDetails"));
+      let orderDetailsElement = document.querySelector(".order-details");
+      let total = JSON.parse(localStorage.getItem("total"));
+      let foods = JSON.parse(localStorage.getItem("foods"));
+
+      orderDetailsElement.innerHTML = `
+       
+        <p><strong>Name:</strong> ${orderDetails.name}</p>
+        <p><strong>Address:</strong> ${orderDetails.address}</p>
+        <p><strong>Phone:</strong> ${orderDetails.number}</p>
+        <p><strong>Email:</strong> ${orderDetails.email}</p>
+        <p><strong>Order:</strong></p>
+        <ul align="right">
+          ${foods
+            .map(
+              (item) => `
+            <li>
+              <strong>${item.name} - ${item.price}</strong> x ${item.quantity}
+            </li>
+          `
+            )
+            .join("")}
+        </ul>
+        <p><strong>Total:</strong> $${total}</p>
+      `;
+
+
+    </script>
+</body> 
+<footer>
+  <p> See the wonderful foods here and taste an amazing flavours of Asia. </p>
+</footer>
+</html>

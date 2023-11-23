@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Quickway fiesta</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<marquee><b>Welcome to our website where you can find all the food you need with drinks. Feel free to order online on the Online shop tab. 
+		If there is any problem please contact us through Contact Us page. "Completed by: <strong>Bibek Neupane</strong>" </b> </marquee>
+	<h1>Welcome to Online Food</h1>
+	<nav>
+		<ul>
+		<span><a href="index.html">Home Page</a></span> &nbsp &nbsp &nbsp &nbsp
+		<span><a href="Aboutus.html">About Us Page</a></span> &nbsp &nbsp &nbsp &nbsp
+		<span><a href="shop.html">Online Shop</a></span> &nbsp &nbsp &nbsp &nbsp
+		<span><a href="faqs.html">FAQs Page</a></span> &nbsp &nbsp &nbsp &nbsp
+		<span><a href="basket.html">Shopping Basket</a></span> &nbsp &nbsp &nbsp &nbsp
+		<span><a href="register.html">Register</a></span>
+		<span><a href="login.html">Log in</a></span>
+			&nbsp &nbsp &nbsp &nbsp
+	   
+		<div class="dropdown">
+		  <button>Contact Us</button>
+		  <div class="dropdown-content">
+			<a href="https://whatsapp.com">WhatsApp</a>
+			<a href="contactonlinefiesta@gmail.com">Gmail</a>
+			<a href="https://facebook.com">Facebook</a>
+			<a href="https://twitter.com/">Twitter</a>
+		  </div>
+		</div>
+	  </nav>
+	<div align = "center" class="chat-popup" id="myForm">
+		<form action="action_page.php" class="form-container">
+		  <h1>Chat</h1>
+	  
+		  <label for="msg"><b>Message</b></label>
+		  <textarea placeholder="Type message.." name="msg" required></textarea>
+	  
+		  <button type="submit" class="btn">Send</button>
+		  <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+		</form>
+		<script>
+			document.getElementById("myButton").onclick = function(){
+        var message = document.getElementById("msg").value;
+        console.log("Your messages: ", msg);
+	}
+		</script>
+	  </div>
+<h2 align="left">FAQs</h2>
+		<p>Have questions about our service? Check out our FAQs page for answers to some of the most commonly asked questions. Also feel free to send us any question
+			we will be happy to see our customers have something to say to us. We will reply as soon as possible.
+		</p>
+        </body>
+        </html>

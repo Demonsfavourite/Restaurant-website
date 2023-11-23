@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Quickway fiesta</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <marquee><b>Welcome to our website where you can find all the food you need with drinks. Feel free to order online on the Online shop tab. 
+      If there is any problem please contact us through Contact Us page. "Completed by: <strong>Bibek Neupane</strong>" </b> </marquee>
+    </p>
+    <h1>Welcome to Online Food</h1>
+
+    <nav>
+      <ul>
+      <span><a href="index.html">Home Page</a></span> &nbsp &nbsp &nbsp &nbsp
+      <span><a href="Aboutus.html">About Us Page</a></span> &nbsp &nbsp &nbsp &nbsp
+      <span><a href="shop.html">Online Shop</a></span> &nbsp &nbsp &nbsp &nbsp
+    <span><a href="faqs.html">FAQs Page</a></span> &nbsp &nbsp &nbsp &nbsp
+      <span><a href="basket.html">Shopping Basket</a></span> &nbsp &nbsp &nbsp &nbsp
+      <span><a href="register.html">Register</a></span>
+      
+          &nbsp &nbsp &nbsp &nbsp
+     
+      <div class="dropdown">
+        <button>Contact Us</button>
+        <div class="dropdown-content">
+          <a href="https://whatsapp.com">WhatsApp</a>
+          <a href="contactonlinefiesta@gmail.com">Gmail</a>
+          <a href="https://facebook.com">Facebook</a>
+          <a href="https://twitter.com/">Twitter</a>
+        </div>
+      </div>
+    </nav>
+    <div id="shopping-basket">
+      <h2 align="left">Shopping Basket</h2>
+      <p>
+        Review the items in your basket and make any necessary changes. 
+      </p>
+      <p>
+        When you're ready to check out, simply enter your delivery information
+        and payment details. We accept all major credit cards and PayPal.
+      </p>
+      <ul id="basket-items"></ul>
+      <p
+        style="
+          padding: 1rem;
+          background-color: bisque;
+          border-radius: 12px;
+          color: #2a2a2a;
+        "
+      >
+        Total: $<span id="basket-total">0.00</span>
+      </p>
+    <div class="outputtable">
+      <table>
+        <thead>
+          <tr>
+            <th>SN</th>
+            <th>FOOD</th>
+            <th>PRICE</th>
+            <th>QUANTITY</th>
+            <th>IMAGE</th>
+            <th>ACTION</th>
+          </tr>
+        </thead>
+        <tbody id="basketrow"></tbody>
+      </table>
+    </div>
+    <script src="./js/basket.js">
+
+    </script>
+    <div>
+      <nav>
+        <span><a href="info.html">Finish Order</a></span>
+      </nav> 
+    </div>
+      <footer>
+       <p> See the wonderful foods here and taste an amazing flavours of Asia. </p>
+      </footer>
+  </body>
+</html>

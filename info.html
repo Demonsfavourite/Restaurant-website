@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Quickway fiesta</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Welcome to Online Food</h1>
+    </header>
+
+    <p>
+      <b
+        >Welcome to our website where you can find all the food you need with
+        drinks. Feel free to order online on the Online shop tab. If there is
+        any problem please contact us through Contact Us page. "Completed by:
+        <strong>Bibek Neupane</strong>"
+      </b>
+    </p>
+    <form>
+      <div align="center" class="container">
+        <label for="name">Enter your name: </label><br />
+        <input
+          type="text"
+          id="myText"
+          style="width: 300px; height: 30px"
+          required
+        /><br />
+        <br />
+        <br />
+        <br />
+        <label for="number">Enter your number: </label><br />
+        <input
+          type="number"
+          id="myNumber"
+          style="width: 300px; height: 30px"
+          required
+        /><br />
+        <br />
+        <br />
+        <br />
+        <label for="email">Enter your email address: </label><br />
+        <input
+          type="email"
+          id="myEmail"
+          style="width: 300px; height: 30px"
+          required
+        /><br />
+        <br />
+        <br />
+        <br />
+        <label for="text">Enter your home address: </label><br />
+        <input
+          type="text"
+          id="myAddress"
+          style="width: 400px; height: 30px"
+          required
+        /><br />
+        <br />
+        <br />
+        <br />
+        <label>Total amount to pay: </label><br />
+        <input
+          type="number"
+          id="totalAmount"
+          style="width: 300px; height: 30px"
+          required
+        /><br />
+        <br />
+        <br />
+        <div class="container">
+          <button id="myButton">Pay out</button>
+        </div>
+      </div>
+    </form>
+    <script>
+      let totalAmount = document.getElementById("totalAmount");
+
+      const user = JSON.parse(localStorage.getItem("user"));
+      var myName = document.getElementById("myText");
+
+      var myNumber = document.getElementById("myNumber");
+
+      var myEmail = document.getElementById("myEmail");
+
+      var myAddress = document.getElementById("myAddress");
+
+      if (user) {
+        myName.value = user.name;
+        myNumber.value = user.number;
+        myEmail.value = user.email;
+        myAddress.value = user.address;
+      }
+      totalAmount.value = localStorage.getItem("total");
+      document
+        .getElementById("myButton")
+        .addEventListener("click", function (e) {
+          e.preventDefault();
+
+          const orderDetails = {
+            name: myName.value,
+            number: myNumber.value,
+            email: myEmail.value,
+            address: myAddress.value,
+            totalAmount: totalAmount.value,
+          };
+          localStorage.setItem("orderDetails", JSON.stringify(orderDetails));
+          window.location.href = "order-page.html";
+        });
+    </script>
+    <footer>
+      <p>See the wonderful foods here and taste an amazing flavours of Asia.</p>
+    </footer>
+  </body>
+</html>
